@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container-grid {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas: 
+    "img1 img2 img3 img3 img3"
+    "img1 img2 img3 img3 img3"
+    "img4 img4 img3 img3 img3"
+    "img4 img4 img3 img3 img3"
+    "img5 img5 img6 img6 img6"
+    "img5 img5 img6 img6 img6";
+    gap: 5px;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img:hover {
+    filter: grayscale(50%);
+    cursor: pointer;
+    transition: filter .5s;
+}
+
+.img-1 {
+    grid-area: img1;
+}
+.img-2 {
+    grid-area: img2;
+}
+.img-3 {
+    grid-area: img3;
+}
+.img-4 {
+    grid-area: img4;
+}
+.img-5 {
+    grid-area: img5;
+}
+.img-6 {
+    grid-area: img6;
+}
+
+.container-img {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform .4s ease-in;
+}
+
+.move {
+    transform: translateX(0);
+}
+
+.img-show {
+    height: 80%;
+    transform: scale(0);
+    display: block;
+    object-fit: cover;
+    transition: transform .2s .4s;
+}
+
+.show {
+    transform: scale(1);
+}
+
+.copy {
+    position: fixed;
+    color: #fff;
+    bottom: 40px;
+    z-index: 1000;
+}
+
+.bx.bx-x {
+    position: absolute;
+    color: wheat;
+    top: 20px;
+    right: 10px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+/* Segunda Seccion */
+
+.precios{
+    z-index: 1;
+    background: dimgrey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.contender{
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.contender figure{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0px 15 25px rgba (0, 0, 0, 0.5);
+
+}
+.contender figure img{
+    width: 100%;
+    height: 100%;
+    transition: all 500ms ease-out;
+}
+.contender figure .capa{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 103,123, 0.5);
+    transition: all 500ms ease-out;
+    opacity: 0 ;
+    visibility: hidden;
+    text-align: center;
+}
+.contender figure:hover > .capa{
+    opacity: 1;
+    visibility: visible;
+}
+.contender figure:hover > .capa h3{
+    margin-top: 70px;
+    margin-bottom: 15px;
+    
+}
+.contender figure:hover > img{
+    transform: scale(1.3);
+}
+.contender figure .capa h3{
+    color: #fff;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 120px;
+    transition: all 500ms ease-out;
+    margin-top: 30px;
+}
+.contender figure .capa p{
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.5;
+    width: 100%;
+    max-width: 220px;
+    margin: auto;
+}
+
+
+@media screen and (max-width:700px){
+    .img-show {
+        width: 90%;
+    }
+    .copy {
+        bottom: 20px;
+    }
+    .bx.bx-x {
+        top: 10px;
+        font-size: 25px;
+    }
+}

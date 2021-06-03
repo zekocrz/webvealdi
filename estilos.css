@@ -1,0 +1,521 @@
+* {margin: 0;padding: 0;box-sizing: border-box;}
+:root {scroll-behavior: smooth;}
+body {font-family: 'Oswald', sans-serif;}
+
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    overflow: hidden;
+    margin: auto;
+    padding: 60px 0;
+}
+
+header {
+    height: 100vh;
+    background-image: linear-gradient(to top, rgba(27, 15, 192, 0.5) 0%, rgba(138, 138, 138, 0.5) 100%), url(img/undraw_QA_engineers_dg5p.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
+    background-position: center ;
+}
+.head {
+    text-align: center;
+    top: 30%;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+.hamburguer {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .7);
+    z-index: 99;
+}
+.logo-vealdi{
+    position: fixed;
+    opacity: .5;
+    top: 31px;
+    left: 30px;
+    border-radius: 5px;
+    height: 40px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .7);
+    z-index: 100;
+}
+.logo-vealdi:hover{opacity: 1;}
+
+.lateral a{display:inline-block;color: #000;position: fixed;opacity: .5;writing-mode: vertical-rl; bottom: 10px;right: 20px;padding:10px 10px;/*Adicción*/letter-spacing:8px;overflow:hidden;transition: .2s;z-index:95;}
+.lateral a:hover{opacity: 1;font-weight: 500;color:#fff; /*Cambios a boton*/background:rgba(50, 50, 50, 0.493);box-shadow:0 0 10px rgb(50, 50, 50), 0 0 40px rgb(50, 50, 50), 0 0 80px rgb(50, 50, 50);transition-delay:1s;}
+.lateral a span{position:absolute;display:block;}
+.lateral a span:nth-child(1){top:0;left:-100%;width:100%;height:2px;background:linear-gradient(90deg,transparent,#000);z-index:97;}
+.lateral a:hover span:nth-child(1){left:100%;transition:1s;}
+.lateral a span:nth-child(3){bottom:0;right:-100%;width:100%;height:2px;background:linear-gradient(270deg,transparent,#000);z-index:97;}
+.lateral a:hover span:nth-child(3){right:100%;transition:1s;transition-delay:.5s;}
+.lateral a span:nth-child(2){top:-100%;right:0;width:2px;height:100%;background:linear-gradient(180deg,transparent,#000);z-index:97;}
+.lateral a:hover span:nth-child(2){top:100%;transition:1s;transition-delay:.25s;}
+.lateral a span:nth-child(4){bottom:-100%;left:0;width:2px;height:100%;background:linear-gradient(360deg,transparent,#000);z-index:97;}
+.lateral a:hover span:nth-child(4){bottom:100%;transition:1s;transition-delay:.75s;}/*fin boton vealdi*/
+
+.menu-navegacion {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-image: linear-gradient(to top, rgb(160, 160, 160) 0%, rgb(35, 10, 173) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: transform 1s ease-in-out;
+    transform: translate(110%);
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+    z-index: 99;
+}
+.resaltar {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 5px 25px;
+}
+.spread {
+    transform: translate(0);
+}
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+.titulo {
+    text-align: center;
+    font-weight: 700;
+    color: #2e009b;
+    text-shadow: 0 0 20px rgba(62, 62, 62, 0.705),0 0 40px rgba(62, 62, 62, 0.705),0 0 80px rgba(62, 62, 62, 0.705);
+    margin-bottom: 40px;
+    font-size: 60px;
+}
+.copy {
+    font-weight: 400;
+    padding: 10px;
+    font-size: 25px;
+    color: #0400ff;
+    text-shadow: 0 0 20px #000,0 0 40px #000,0 0 80px #000;
+    
+}
+.copy:hover{
+    color: #03e9f4;
+}
+
+.subtitulo {
+    text-align: center;
+    font-weight: 700;
+    color: #0400ff;
+    margin: 0;
+    padding: 20px;
+    text-shadow: 0 0 20px rgba(253, 253, 253, 0.705),0 0 40px rgba(253, 253, 253, 0.705),0 0 80px rgba(253, 253, 253, 0.705);
+    margin-bottom: 40px;
+    font-size: 60px;
+}
+.nuestros-serv{/*Cambio imagen fondo*/background-image: url(img/fondo_engine.jpg); background-size: cover;/*background-attachment: fixed;*/ background-repeat: no-repeat; background-position: center;}
+.contenedor-serv {   
+    margin: 0;   
+    background: linear-gradient(90deg, rgba(24,12,140,.3) 10%, rgba(0,212,255,.3) 50%, rgba(194,191,191,.3) 80%);
+}
+.contenedor-servicio {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contenedor-servicio img {
+    width: 40%;
+}
+.checklist-servicio {
+    width: 40%;
+}
+.service {
+    margin-bottom: 20px;
+}
+.n-service {
+    margin-bottom: 7px;
+    color: #4dff03;
+    font-size: 30px;
+}
+.number {
+    display: inline-block; 
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    width: 30px;
+    height: 30px;
+    color: white;
+    text-align: center;
+    border-radius: 50%;
+    font-weight: 700;
+    line-height: 30px;
+    margin-right: 7px;
+}
+
+/* Estilos de Materialize */
+/* Contenedor del carrusel */
+.carru {
+    height: 70%;
+    background: linear-gradient(90deg, rgba(24,12,140,.3) 10%, rgba(0,212,255,.3) 50%, rgba(194,191,191,.3) 80%),url(img/banner1.jpg),transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+ /* Titulo dentro de la imagen */
+.subtitulos {
+    margin: 0;
+    color: rgb(52, 160, 248);
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.7);
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+/* Descripción de la imagen */
+.descripcion {
+    color: white;
+    margin: 7px 0;
+    font-size: 20px;
+    font-weight: 60px;
+    text-shadow: 2px 2px 1px rgba(0,0,0,.9);
+    margin-top: 0;
+}
+/* División del titulo y descripción de la línea */
+.linea-division {
+    width: 80%;
+    height: 2px;
+    background-color: #36221c;
+}
+.carousel {
+    min-height: 600px;
+}
+.carousel .carousel-item {
+    display: flex;
+    flex-direction: column; /* Coloca el contenido en columna al ser flexbox */
+    justify-content: center; /* Centra el contenido */
+    align-items: center; /* Centra el texto */
+    user-select: none; /* quita la opcion de seleccionar conel mouse */
+    width: 400px;
+    height: 400px;
+}
+ /* Colocar imagen de fondo */
+ .carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    position: absolute; /* Coloca toda la imagen */
+    top: 0; /* Coloca marge arriba */
+    left: 0; /* Coloca margen a la izquierda */
+    z-index: -1; /* Esta propiedad envía una capa atras la imagen */ 
+    border-radius: 15px;
+}
+/* Para cambiar el estilo de los indicadores*/
+.carousel .indicators .indicator-item {
+    border-radius: 0;
+    transform: rotate(45deg);
+    margin: 0 15px;
+    background: rgb(48, 36, 36);
+}
+/* Sección de presencia*/
+
+.contenedor-pres {
+    background: linear-gradient(90deg, rgba(24,12,140,.3) 10%, rgba(0,212,255,.3) 50%, rgba(194,191,191,.3) 80%), url(img/imagen2.png),transparent;
+    background-size: contain;
+    background-attachment: fixed;
+}
+.experts{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cont-expert{
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cont-expert img{
+    width: 60%;
+    display: block;
+    margin: auto;
+    border-radius: 25%;
+}
+.n-expert{
+   display: inline-block;
+   margin-top: 20px;
+   width: 100%;
+   font-weight: 400;
+   font-size: 2em;
+} /* finaliza la seccion de presencia */
+
+.contenedorx {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(24,12,140,.3) 10%, rgba(0,212,255,.3) 50%, rgba(194,191,191,.3) 80%), url(img/imagen1.png), transparent;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+}
+.expertsx {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.cont-expertx {
+    width: 30%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.cont-expertx img {
+    width: 70%;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+.n-expert {
+    display: inline-block;
+    margin-top: 20px;
+    width: 100%;
+    font-weight: 400;
+}
+
+/*boton flotante*/
+#btn-mas{
+    display: none;
+}
+.contenedor-btn{
+    z-index: 98;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+.fas{
+    transform: rotate(45deg);
+}
+.redes a, .fas {
+    font-size: 25px;
+    display: block;
+    text-decoration: none;
+    background: rgba(0, 0, 0, 0.7);
+    width: 50px;
+    height: 50px;
+    line-height: 55px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transition: all 500ms ease;
+}
+.fas:hover{
+    background: rgba(0, 0, 0, 1);
+}
+.fa-facebook:hover{
+    background: rgb(66, 103, 178);
+    box-shadow:0 0 10px rgb(66, 103,178), 0 0 20px rgb(66, 103,178), 0 0 40px rgb(66, 103,178);
+}
+.fa-instagram-square:hover{
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+    box-shadow: 0 0 20px #285AEB, 0 0 30px #D6249F, 0 0 35px #fd5949 ,0 0 40px #FDF497;
+}
+.fa-whatsapp-square:hover{
+    background: #075e54;
+    box-shadow: 0 0 10px #075354, 0 0 20px #075354, 0 0 40px #075354;
+}
+.redes a{
+    margin-bottom: -15px;
+    opacity: 0;
+    visibility: hidden;
+}
+#btn-mas:checked~ .redes a{
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+#btn-mas:checked~ .btn-mas .fas{
+    transform: rotate(90deg);
+}
+/* Fin de boton Redes */
+
+.divisor{
+    width: 100%;
+    background: rgba(0, 255, 242, 0.5);
+    margin: 0;
+    height: 20px;
+ }
+
+ .divisor1 {
+     width: 100%;
+     background: rgb(2, 2, 150);
+     height: 20px;
+ }
+
+/* Pie de página */
+footer{
+    background: linear-gradient(90deg, rgba(24,12,140,.5) 10%, rgba(194,191,191,.3) 50%, rgba(0,212,255,.8) 100%), url(img/Vealdi.png), transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 0.1px;
+    
+}
+.footer-content{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.contact-us{
+    width: 40%;
+    color: #000;
+}
+.contact-us a {
+    color: black;
+}
+.brand{
+    font-weight: 500;
+    font-size: 40px;
+}
+.brand p{
+    font-weight: 500;
+}
+.social-media{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+.social-media-icon{
+    display: inline-block;
+    margin-left: 20px;
+    width: 33px;
+    height: 33px;
+    border: 1px solid white;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+}
+.social-media-icon:hover{
+   background: white;
+   
+}
+.social-media-icon img{
+   font-size: 30px;
+   height: 30px;
+   align-content: center;
+}
+.line{
+   width: 90%;
+   max-width: 1200px;
+   margin: auto;
+   height: 3px;
+   background: #0207ff80;
+   margin-bottom: 60px;
+}
+.titulo-final {
+    font-size: 1.3em;
+    color: rgba(110, 34, 34, 0.781);
+    text-align: center;
+}
+
+@media screen and (max-width:800px) {
+    .menu-navegacion {
+        width: 50vh;
+    }
+    .logo-vealdi{
+        top: 30px;
+    }
+    .menu-navegacion a{
+        font-size: 20px;
+    }
+    .titulo {
+        font-size: 40px;
+    }
+    .contenedor-servicio img {
+        width: 70%;
+        margin-bottom: 40px;
+    }
+    .checklist-servicio {
+        width: 60%;
+    }
+    .service {  
+        margin-bottom: 40px;
+    }
+    .n-service{
+        font-size: 25px;
+    }    
+    .contenedor-serv {
+        width: 100%;
+    }
+    .cont-experts {
+        width: 80%;
+    }
+    .n-expert {
+        font-size: 100%;
+    }
+    .cont-expertx {
+        width: 45%;
+    }
+    
+    .footer-content {
+        justify-content: center;
+    }
+    .social-media {
+        width: 80%;
+        justify-content: space-evenly;
+    }
+    .social-media-icon {
+        margin-left: 0;
+    }
+    .social-media img {
+        margin-left: 0;
+    }
+    .contact-us {
+        text-align: center;
+        width: 80%;
+        margin-bottom: 40px;
+    }
+    
+}
+
+@media screen and (max-width:500px){
+    .menu-navegacion {
+        width: 35vh;   
+    }
+    .logo-vealdi{
+        top: 20px;
+    }
+    .menu-navegacion a{
+        font-size: 15px;
+    }
+    .hamburguer {
+        top: 20px;
+        right: 20px;
+    }
+    .titulo {
+        font-size: 40px;
+    }
+    .subtitulo {
+        font-size: 25px;
+    }
+    .agregar-imagen {
+        width: 95%;
+    }
+    .img-galeria {
+        width: 95%;
+    }
+    .social-media {
+        width: 100%;
+    }
+    .contact-us {
+        width: 90%;
+    }
+}
